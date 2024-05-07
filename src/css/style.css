@@ -1,0 +1,123 @@
+:root {
+    --primary-background: var(--pico-background-color);
+    --border-color: #4b3781ec;
+    --button-hover: rgb(76, 72, 95);
+    --bar-width: 50px;
+    --bar-radius: 25px;
+    --div-hole: 10px; /* Separación entre el emulador y las barrras */
+}
+
+body ,div ,html { background: none; }
+
+#top-bar {
+    width: 100%;
+    height: var(--bar-width);
+    background-color: var(--primary-background);
+    border-radius: var(--bar-radius);
+    -webkit-app-region: drag;
+    display: flex;
+    align-items: center;
+}
+
+#top-bar > button {
+    -webkit-app-region: no-drag;
+    /* width: var(--top-bar-width); */
+    /* height: var(--top-bar-width); */
+    border-radius: var(--bar-radius);
+    background: transparent;
+    color: aliceblue;
+    border: var(--primary-background) solid 1px;
+}
+
+#top-bar > button:hover {background-color: var(--button-hover);}
+
+#top-bar > input {
+    background: var(--primary-background);
+    border: var(--border-color) solid 1px;
+    margin: 5px;
+    -webkit-app-region: no-drag;
+    color: white;
+}
+
+#left-bar {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--bar-width);
+    background: var(--primary-background);
+    padding: 2px;
+    border-radius: var(--bar-radius);
+    height: 300px;
+    box-shadow:#000000aa 15px 15px 20px;
+}
+
+#left-bar > button {
+    padding: 0;
+    width: 100%;
+}
+
+#left-bar>button:hover {background-color: var(--button-hover);}
+#left-bar>button {
+    -webkit-app-region: no-drag;
+    /* width: var(--top-bar-width); */
+    /* height: var(--top-bar-width); */
+    border-radius: var(--bar-radius);
+    background: transparent;
+    color: aliceblue;
+    border: var(--primary-background) solid 1px;
+}
+
+/* Search Bar */
+#search-bar {
+    z-index: 1;
+}
+
+/* Emulator Zone  */
+#emu {
+    position: absolute;
+    height: 540px;
+    top: calc(var(--bar-width) + var(--div-hole));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+#phone-img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+}
+
+iframe {
+    /* background-color: blue; */
+}
+
+.full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Simbols */
+@font-face {
+    font-family: NerdFonts;
+    src: url("./SymbolsNerdFontMono-Regular.ttf");
+}
+
+.icon {
+    font-family: NerdFonts;
+}
+
+.diamont-fill:before {content: "◈";}
+.diamont:before {content: "◇";}
+.icon-search::before {content: "";}
+.icon-device::before {content: "";}
+.icon-pin::before {content: "󰐃";}
+.icon-unpin::before {content: "";}
+.icon-exit::before {content: "";}

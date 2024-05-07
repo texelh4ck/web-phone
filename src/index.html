@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Phone</title>
+    <link rel="stylesheet" href="./css/pico.blue.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <meta http-equiv="refresh" content="1"> -->
+</head>
+<body >
+    <div id="top-bar" role="group">
+        <button id="bt_menu" onclick="bt_menu()" class="diamont"></button>
+        <p id="top-bar-title">Web Phone - Simulator</p>
+        <button onclick="bt_exit()" class="icon icon-exit"></button>
+    </div>
+    <div id="left-bar" role="group" hidden>
+        <button class="icon icon-pin"></button>
+        <button onclick="bt_search()" class="icon icon-search"></button>
+        <button onclick="bt_select_device()" class="icon icon-device"></button>
+    </div>
+    
+    <div id="search-bar" role="search" hidden>
+        <input type="search" name="go_url" id="">
+        <input onclick="set_url()" type="submit" value="Go">
+    </div>
+
+    <div id="emu" class="full">
+        <iframe id="frame-view" src="" frameborder="0"></iframe>
+        <div id="phone-img" class="full" ></div>
+    </div>
+</body>
+<script src="js/phones.js"></script>
+<script src="js/global.js"></script>
+<script src="js/search.js"></script>
+<script src="js/left_bar.js"></script>
+</html>
