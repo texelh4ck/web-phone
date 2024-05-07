@@ -16,3 +16,12 @@ phones.devices.forEach(e => {
 });
 // Set model phone
 set_phone(phone);
+
+// Keys
+window.addEventListener("keydown", e => {
+  if (e.code === "KeyS" && e.ctrlKey) {
+    switch_search_bar()
+  } else if (e.code == "KeyD" && e.ctrlKey) {
+    switch_device_selector()
+  }
+})
