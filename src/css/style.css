@@ -69,7 +69,9 @@ body ,div ,html { background: none; }
 }
 
 /* Search Bar */
-#search-bar {
+#search-bar {z-index: 1;}
+
+#device-selector {
     z-index: 1;
 }
 

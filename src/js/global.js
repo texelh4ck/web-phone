@@ -8,13 +8,11 @@ function bt_menu() {
   switch_left_menu();
 }
 
-function bt_select_device() {
-  if (phone == "iphone_x") {
-    phone = "samsung_note_7"
-  } else {
-    phone = "iphone_x"
-  }
-  set_phone(phone);
-}
-
-set_phone("samsung_note_7");
+// Init
+// Load all phone models
+phones.devices.forEach(e => {
+  document.getElementsByName("device")[0].innerHTML += 
+  `<option title="${e}" name="${e}" ${ e == phone ? "selected":"" }>${phones[e].name}</option>`
+});
+// Set model phone
+set_phone(phone);

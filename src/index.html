@@ -13,7 +13,7 @@
         <p id="top-bar-title">Web Phone - Simulator</p>
         <button onclick="bt_exit()" class="icon icon-exit"></button>
     </div>
-    <div id="left-bar" role="group" hidden>
+    <div id="left-bar"  role="group" hidden>
         <button class="icon icon-pin"></button>
         <button onclick="bt_search()" class="icon icon-search"></button>
         <button onclick="bt_select_device()" class="icon icon-device"></button>
@@ -22,6 +22,10 @@
     <div id="search-bar" role="search" hidden>
         <input type="search" name="go_url" id="">
         <input onclick="set_url()" type="submit" value="Go">
+    </div>
+    <div id="device-selector" role="search" hidden>
+        <select name="device" onchange="select_device()" required>
+        </select>
     </div>
 
     <div id="emu" class="full">

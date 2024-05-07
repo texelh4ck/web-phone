@@ -11,3 +11,7 @@ function switch_left_menu() {
 function bt_search() {
   switch_search_bar();
 }
+
+function bt_select_device() {
+  switch_device_selector();
+}

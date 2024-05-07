@@ -1,4 +1,8 @@
 const phones = {
+    devices: [
+        "iphone_x",
+        "samsung_note_7",
+    ],
     "iphone_x": {
         name: "IPhone X",
         image: "phones/iphone_x.png",
@@ -18,4 +22,18 @@ function set_phone(model) {
     document.getElementById("frame-view").style.width = `${phones[model].w}px`;
     document.getElementById("frame-view").style.height = `${phones[model].h}px`;
     document.getElementById("frame-view").style.borderRadius = `${phones[model].radius}px`;
+}
+
+function switch_device_selector() {
+  if (document.getElementById("device-selector").attributes.length == 3) {
+    document.getElementById("device-selector").removeAttribute("hidden");
+  } else {
+    document.getElementById("device-selector").setAttribute("hidden", null);
+  }
+}
+
+function select_device() {
+  const d = document.getElementsByName("device")[0].selectedOptions[0].title;
+  set_phone(d);
+  switch_device_selector()
 }
