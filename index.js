@@ -9,6 +9,7 @@ const main = () => {
         transparent: true,
         resizable: false,
         alwaysOnTop: true,
+        icon: "images/logo.png"
     })
     win.loadFile("src/index.html");
 }
