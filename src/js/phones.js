@@ -7,6 +7,7 @@ const phones = {
     "iphone_7_jet_black",
     "iphone_6",
     "iphone_x",
+    "iphone_14",
   ],
   iphone_x: {
     name: "IPhone X",
@@ -14,6 +15,13 @@ const phones = {
     radius: 20,
     w: 240,
     h: 480,
+  },
+  iphone_14: {
+    name: "IPhone 14",
+    image: "phones/iphone_14.png",
+    radius: 30,
+    w: 240,
+    h: 520,
   },
   samsung_note_7: {
     name: "Samsung Note 7",
