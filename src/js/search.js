@@ -7,6 +7,7 @@ function switch_search_bar() {
 }
 
 function set_url() {
+    
     let url = document.getElementsByName("go_url")[0].value;
     if (!url.includes("http") && !url.includes("file:///")) {
       url = "http://" + url;
